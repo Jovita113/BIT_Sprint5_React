@@ -1,12 +1,13 @@
-import { Typography } from '@mui/material';
 import React from 'react';
-
+import "./BottomNav.css"
 
 const Home = () => {
     return (
-        <>
-          <Typography>This Home Page</Typography>
-      </>
+          <div className='bodyCont'>
+            <h1 className='centerW'>
+              WELLCOME!!
+            </h1>
+          </div>
     );
 };
 

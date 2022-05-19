@@ -12,74 +12,88 @@ function BookList() {
   const [tasks, setTasks] = useState([]);
   const [showAddTask, setShowAddTask] = useState(false);
 
+  
   useEffect(() => {
-    setTimeout(() => {
-      setloading(false);
-    }, 3500);
-  }, [])
+      setTimeout(() => {
+          setloading(false);
+      }, 3500);
+  }, []);
+
 
   const getTasks = JSON.parse(localStorage.getItem("bookAdded"));
+
   useEffect(() => {
-    if (getTasks == null) {
-      setTasks([])
-    } else {
-      setTasks(getTasks);
-    }
-  }, [])
-
-  const addTask = (task) => {
-    const id = uuidv4();
-    const newTask = { id, ...task }
-
-    setTasks([...tasks, newTask]);
-
-    Swal.fire({
-      icon: 'success',
-      title: 'Yay...',
-      text: 'You have successfully added a new book!'
-    })
-
-    localStorage.setItem("bookAdded", JSON.stringify([...tasks, newTask]));
-  }
-
-  const deleteTask = (id) => {
-    const deleteTask = tasks.filter((task) => task.id !== id);
-
-    setTasks(deleteTask);
-
-    Swal.fire({
-      icon: 'success',
-      title: 'Oops...',
-      text: 'You have successfully deleted a book!'
-    })
-
-    localStorage.setItem("bookAdded", JSON.stringify(deleteTask));
-  }
-
-  const editTask = (id) => {
-    const text = prompt("Author name");
-    const day = prompt("Book title");
-    const myData = tasks.map(x => {
-      if (x.id === id) {
-        return {
-          ...x,
-          text: text,
-          day: day,
-          id: uuidv4()
-        }
+      if (getTasks == null) {
+          setTasks([])
+      } else {
+          setTasks(getTasks);
       }
-      return x;
-    })
-    Swal.fire({
-      icon: 'success',
-      title: 'Yay...',
-      text: 'You have successfully edited an existing book!'
-    })
-    localStorage.setItem("BookAdded", JSON.stringify(myData));
-    window.location.reload();
+      // eslint-disable-next-line
+  }, []);
+
+  
+  const addTask = (task) => {
+      const id = uuidv4();
+      const newTask = { id, ...task }
+
+      setTasks([...tasks, newTask]);
+
+      Swal.fire({
+          icon: 'success',
+          title: 'Yay...',
+          text: 'You have successfully added a new book!'
+      })
+
+      localStorage.setItem("bookAdded", JSON.stringify([...tasks, newTask]));
   }
+
+ 
+  const deleteTask = (id) => {
+      const deleteTask = tasks.filter((task) => task.id !== id);
+
+      setTasks(deleteTask);
+
+      Swal.fire({
+          icon: 'success',
+          title: 'Oops...',
+          text: 'You have successfully deleted a book!'
+      })
+
+      localStorage.setItem("bookAdded", JSON.stringify(deleteTask));
+  }
+
+  
+  const editTask = (id) => {
+
+      const author = prompt("Author Name");
+      const title = prompt("Book title");
+      let data = JSON.parse(localStorage.getItem('bookAdded'));
+
+      const myData = data.map(x => {
+          if (x.id === id) {
+              return {
+                  ...x,
+                  author: author,
+                  title: title,
+                  id: uuidv4()
+              }
+          }
+          return x;
+      })
+
+      Swal.fire({
+          icon: 'success',
+          title: 'Yay...',
+          text: 'You have successfully edited an existing book!'
+      })
+
+      localStorage.setItem("bookkAdded", JSON.stringify(myData));
+      window.location.reload();
+  }
+
   return (
     <>
+    <div className="bodyCont">
       {
         loading ?
           <div className="spinnerContainer">
@@ -104,7 +118,7 @@ function BookList() {
 
             {showAddTask && <AddTask onSave={addTask} />}
 
-            <h3>Number of Tasks: {tasks.length}</h3>
+            <h3>Number of Books: {tasks.length}</h3>
 
             {
               tasks.length > 0
@@ -115,6 +129,7 @@ function BookList() {
             }
           </div>
         }
+        </div>
     </>
   )
 }
