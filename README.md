@@ -30,15 +30,17 @@ If you wanna run this project, you will need to have [NodeJS and npm](https://no
 Then you will need to perform the following steps:
 
 - Go in your code editor and open terminal (GIT Bash)
-- Clone the git repozitory (type $git clone https://github.com/Jovita113/bit_sprint5_react.git)
-- In your cloned folder you need install node modules. Type in git bash  $npm install 
+- Clone the git repozitory (type `$ git clone https://github.com/Jovita113/bit_sprint5_react.git`)
+- In your cloned folder you need install node modules. Type in git bash  `$ npm install`
 - Install Libraries:
-    * npm add react-icons
-    * npm add sweetaler2
-    * add uuid
+```
+    $ npm add react-icons
+    $ npm add sweetaler2
+    $ npm add uuid
+```
 - Install Router DOM:
-    * $npm install react-router-dom@6
-- Now your can run project. Type $npm start in git bash
+    `$ npm install react-router-dom@6`
+- Now your can run project. Type `$ npm start` in git bash
 
 ## Project Status
 Project is: complete
