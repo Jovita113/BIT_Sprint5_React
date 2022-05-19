@@ -5,6 +5,7 @@ The goal of the project - create a shopping list application using the CRUD meth
 - Can add item (from local storage)
 - Delete item (from local storage)
 - Product update (local storage)
+
 And navigation(must be created using the react router)
 The app must be used from a mobile device.
 
@@ -23,7 +24,7 @@ Project is created with:
 * Material UI
 
 
-##Project Installation and Set-up
+## Project Installation and Set-up
 
 If you wanna run this project, you will need to have [NodeJS and npm](https://nodejs.org/en/) and [code editor](https://code.visualstudio.com/)(I am using VS Code).
 Then you will need to perform the following steps:
@@ -32,17 +33,17 @@ Then you will need to perform the following steps:
 - Clone the git repozitory (type $git clone https://github.com/Jovita113/bit_sprint5_react.git)
 - In your cloned folder you need install node modules. Type in git bash  $npm install 
 - Install Libraries:
-    *npm add react-icons
-    *npm add sweetaler2
-    *add uuid
+    * npm add react-icons
+    * npm add sweetaler2
+    * add uuid
 - Install Router DOM:
-    *$npm install react-router-dom@6
+    * $npm install react-router-dom@6
 - Now your can run project. Type $npm start in git bash
 
-##Project Status
+## Project Status
 Project is: complete
 
-##Contact
+## Contact
 Created by Jovita Feel free to contact me! [LinkedIn](https://linkedin.com/in/jovita-s-496773219)
 
  
