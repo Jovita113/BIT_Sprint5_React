@@ -35,10 +35,33 @@ function BookList() {
       Swal.fire({
           icon: 'success',
           title: 'Oops...',
-          text: 'You have successfully deleted a task!'
+          text: 'You have successfully deleted a book!'
       })
 
       localStorage.setItem("bookAdded", JSON.stringify(deleteTask));
+  }
+
+    const editTask = (id) => {
+      const text = prompt("Author name");
+      const day = prompt("Book title");
+      const myData = tasks.map(x => {
+          if (x.id === id) {
+              return {
+                  ...x,
+                  text: text,
+                  day: day,
+                  id: uuidv4()
+              }
+          }
+          return x;
+      })
+      Swal.fire({
+          icon: 'success',
+          title: 'Yay...',
+          text: 'You have successfully edited an existing book!'
+      })
+      localStorage.setItem("BookAdded", JSON.stringify(myData));
+      window.location.reload();
   }
 
       useEffect(() => {
@@ -56,7 +79,7 @@ function BookList() {
             {
               tasks.length > 0 
               ?
-              (<Tasks tasks={tasks} onDelete={deleteTask} />)
+              (<Tasks tasks={tasks} onDelete={deleteTask} onEdit={editTask} />)
               :
               ('No Book Found!')
             }
