@@ -1,0 +1,26 @@
+.bodycont{
+    min-height: 500px;
+  }
+  
+  .centerw{
+    font-weight: 700;
+    margin-top: 250px;
+    margin-left: 600px;
+    color: blueviolet;
+    font-size: 45px;
+  }
+  
+@media (max-width: 768px) {
+    .centerw{
+      font-weight: 400;
+      margin-left: 220px;
+      color: blueviolet;
+      font-size: 25px;
+    }
+  }
+  
+  @media (max-width: 425px) {
+    .centerw{
+      margin-left: 100px;
+    }
+  }

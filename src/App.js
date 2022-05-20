@@ -4,7 +4,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import BookList from "./components/NavBar/BookList";
 import Contact from "./components/NavBar/Contact";
 import Home from "./components/NavBar/Home";
-import "./App.css";
 
 
 function App() {

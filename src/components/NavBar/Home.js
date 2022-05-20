@@ -1,10 +1,10 @@
 import React from 'react';
-import "./BottomNav.css"
+import "./Home.css"
 
 const Home = () => {
     return (
-          <div className='bodyCont'>
-            <h1 className='centerW'>
+          <div className='bodycont'>
+            <h1 className='centerw'>
               WELLCOME!!
             </h1>
           </div>

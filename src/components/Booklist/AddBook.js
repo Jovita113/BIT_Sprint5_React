@@ -1,12 +1,13 @@
 import { useState } from 'react';
-import Swal from "sweetalert2"
+import Swal from "sweetalert2";
 
-const AddTask = ({onSave}) => {
+const AddBook = ({ onSave }) => {
     const [author, setAuthor] = useState('');
     const [title, setTitle] = useState('');
 
     const onSubmit = (e) => {
         e.preventDefault();
+
         if (!author && !title) {
             Swal.fire({
                 icon: 'error',
@@ -28,6 +29,7 @@ const AddTask = ({onSave}) => {
         } else {
             onSave({ author, title });
         }
+
         setAuthor('');
         setTitle('');
     }
@@ -39,11 +41,13 @@ const AddTask = ({onSave}) => {
                 <input type="text" placeholder="add author" value={author} onChange={(e) => setAuthor(e.target.value)} />
             </div>
             <div className="form-control">
-                <label> Book title</label>
-                <input type="text" placeholder="add your book" value={title} onChange={(e) => setTitle(e.target.value)} />
+                <label>Book title</label>
+                <input type="text" placeholder="add book title" value={title} onChange={(e) => setTitle(e.target.value)} />
             </div>
+
             <input type="submit" className="btn btn-block" value="Save Book" />
         </form>
-      )
-  };
-  export default AddTask;
+    );
+};
+
+export default AddBook;

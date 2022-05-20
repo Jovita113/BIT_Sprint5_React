@@ -9,7 +9,8 @@ The goal of the project - create a shopping list application using the CRUD meth
 And navigation(must be created using the react router)
 The app must be used from a mobile device.
 
-I was create a Book List app.
+I was create a Book List app. Page mobile device look like this:
+![Page](./src/components/images/page.png)
 
 I created this project while studying at BIT.
 

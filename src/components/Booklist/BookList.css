@@ -5,29 +5,13 @@
   margin: 0;
   padding: 0;
 }
-
-.bodyCont{
-  min-height: 600px;
-}
-
-.centerW{
-  font-weight: 700;
-  margin-top: 250px;
-  margin-left: 600px;
-  color: blueviolet;
-  font-size: 45px;
-}
-
 body {
   font-family: "Josefin Sans", sans-serif;
-  background-image: url("../images/bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  min-height: 600px;
+  
 }
-
+.bodycont{
+  min-height: 500px;
+}
 .spinnerContainer {
   margin: 20% auto;
   max-width: 15%;
@@ -42,16 +26,18 @@ body {
 
 .app-header {
   font-family: "Josefin Sans", sans-serif;
+  font-weight: 800;
 }
 
 .container {
   max-width: 600px;
-  margin: 30px auto;
+  margin: 30px auto 330px;
   overflow: auto;
   min-height: 300px;
   padding: 30px;
   border-radius: 5px;
-  background-color: #ccc;
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
 }
 
 .btn {
@@ -137,12 +123,6 @@ body {
     margin: 250px auto 0 auto;
     max-width: 30%;
   }
-  .centerW{
-    font-weight: 400;
-    margin-left: 220px;
-    color: blueviolet;
-    font-size: 25px;
-  }
 }
 
 @media (max-width: 425px) {
@@ -153,10 +133,6 @@ body {
   .spinnerContainer {
     margin: 250px auto 0 auto;
     max-width: 40%;
-  }
-
-  .centerW{
-    margin-left: 100px;
   }
 }
 
