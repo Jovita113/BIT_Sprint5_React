@@ -1,5 +1,7 @@
 # BIT_Sprint5_React
 
+## Project tasks
+
 The goal of the project - create a shopping list application using the CRUD method:
 - Showing items (from local storage)
 - Can add item (from local storage)
@@ -9,6 +11,8 @@ The goal of the project - create a shopping list application using the CRUD meth
 And navigation(must be created using the react router)
 The app must be used from a mobile device.
 
+### Page
+
 I was create a Book List app. Page mobile device look like this:
 ![Page](./src/components/images/page.png)
 
@@ -16,10 +20,11 @@ I created this project while studying at BIT.
 
 
 ## Technologies
+
 Project is created with:
+
 * HTML
 * CSS
-* JavaScript
 * React
 * Bootstrap
 * Material UI
